@@ -30,13 +30,13 @@ function Contact() {
           />
         </div>
         <div className="formGrup">
-          <label htmlFor="massage" hidden>
+          <label htmlFor="message" hidden>
             Massage
           </label>
           <textarea
-            name="massage"
-            id="massage"
-            placeholder="Massage"
+            name="message"
+            id="message"
+            placeholder="Message"
             required
           />
         </div>
