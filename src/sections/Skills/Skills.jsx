@@ -1,29 +1,53 @@
+import React from "react";
+import Slider from "react-slick";
 import styles from "./SkillsStyles.module.css";
-import checkMarkIcon from "../../assets/checkmark-dark.svg";
+import hola from "../../assets/checkmark-dark.svg";
 import SkillList from "../../common/SkillList";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import html from '../../assets/programs/html.svg'
+import css from '../../assets/programs/css.svg'
+import js from '../../assets/programs/js.svg'
+import react from '../../assets/programs/react.svg'
+import java from '../../assets/programs/java.svg'
+import python from '../../assets/programs/python.svg'
+import ts from '../../assets/programs/typesript.svg'
 function Skills() {
+  // Configuración básica del carrusel
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <section id="skills" className={styles.container}>
-      <h1 className = 'sectionTitle' >Skills</h1>
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="html" />
-        <SkillList src={checkMarkIcon} skill="CSS" />
-        <SkillList src={checkMarkIcon} skill="JavaScript" />
-        <SkillList src={checkMarkIcon} skill="TypeScript" />
-        <SkillList src={checkMarkIcon} skill="Node.js" />
-        <SkillList src={checkMarkIcon} skill="React" />
-      </div>
-      <hr />
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="Java" />
-        <SkillList src={checkMarkIcon} skill="Python" />
-      </div>
-      <hr />
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="mySQL" />
-      </div>
-      <hr />
+      <h1 className="sectionTitle">Skills</h1>
+      <Slider {...settings} className={styles.skillList}>
+        <SkillList src={html} skill="HTML" />
+        <SkillList src={css} skill="CSS" />
+        <SkillList src={js} skill="JavaScript" />
+        <SkillList src={ts} skill="TypeScript" />
+        <SkillList src={react} skill="React" />
+        <SkillList src={java} skill="Java" />
+        <SkillList src={python} skill="Python" />
+      </Slider>
     </section>
   );
 }

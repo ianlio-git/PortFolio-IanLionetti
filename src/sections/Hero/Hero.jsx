@@ -2,8 +2,8 @@ import styles from "./HeroStyles.module.css";
 import heroImg from "../../assets/ianLionettiToon.png";
 import sun from "../../assets/sun.svg";
 import moon from '../../assets/moon.svg'
-import twitterLight from "../../assets/twitter-light.svg";
-import twitteDark from "../../assets/twitter-dark.svg";
+import instagramLight from "../../assets/instagram-white.svg";
+import instagramDark from "../../assets/instagram-black.svg";
 import githubLight from "../../assets/github-light.svg";
 import githubDark from "../../assets/github-dark.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
@@ -12,11 +12,11 @@ import CV from "../../assets/CV - Ian Agustin Lionetti.pdf";
 import { useTheme } from "../../common/ThemeContext";
 
 function Hero() {
-    
+      
   const { theme, toggleTheme } = useTheme();
 
   const themeIcon = theme === 'light'? sun : moon
-  const twitterIcon = theme === 'light'? twitterLight : twitteDark
+  const instagramIcon = theme === 'light'? instagramLight : instagramDark
   const githubIcon = theme === 'light'? githubLight : githubDark
   const linkedinIcon = theme === 'light'? linkedinLight : linkedinDark
   
@@ -24,7 +24,6 @@ function Hero() {
   return (
     <section id="hero" className={styles.container}>
       <div className={styles.colorModeContainer}>
-        {/* img of me */}
         <img
           className={styles.hero}
           src={heroImg}
@@ -45,8 +44,8 @@ function Hero() {
         </h1>
         <h2>Full Stack Developer</h2>
         <span>
-          <a href="https://twitter.com/" target="_blank">
-            <img src={twitterIcon} alt="Twitter icon" />
+          <a href="https://www.instagram.com/ianlionetti" target="_blank">
+            <img src={instagramIcon} alt="Twitter icon" />
           </a>
           <a href="https://github.com/ianlio-git" target="_blank">
             <img src={githubIcon} alt="Github icon" />

@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./ProjetsStyles.module.css";
-import viberr from "../../assets/viberr.png";
+import viberr from "../../assets/img.png";
 import fershBurger from "../../assets/fresh-burger.png"
-import hipsster from "../../assets/hipsster.png"
+import hipsster from "../../assets/img2.png"
 import ProjetCard from "../../common/ProjetCard";
 
 function Projets() {
   return (
     <section id="projets" className={styles.container}>
-      <h1 className="sectionTitle">Projets</h1>
+      <h1 className="sectionTitle">  Projets </h1>
       <div className={styles.projectsContainer}>
         <ProjetCard
           src={viberr}

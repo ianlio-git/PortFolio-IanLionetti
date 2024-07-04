@@ -69,6 +69,8 @@
 
 .description {
     max-width: 24ch;
+    margin: 0 auto; 
+    text-align: center; 
 }
 
 .info {
@@ -94,6 +96,7 @@
     .container {
         .hero {
             max-width: 400px;
+            
             width: 400px;
         }
     }
