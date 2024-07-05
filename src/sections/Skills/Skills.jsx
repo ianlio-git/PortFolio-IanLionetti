@@ -16,12 +16,12 @@ function Skills() {
     arrows: false,
     dots: false,
     infinite: true,
-    speed: 3000,
+    speed: 1500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed:0,
-    cssEase: "linear",
+    cssEase: "ease",
     responsive: [
       {
         breakpoint: 800,
@@ -32,7 +32,7 @@ function Skills() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
         },
       },
     ],
