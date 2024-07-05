@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
 import styles from "./SkillsStyles.module.css";
-import hola from "../../assets/checkmark-dark.svg";
 import SkillList from "../../common/SkillList";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,24 +12,27 @@ import java from '../../assets/programs/java.svg'
 import python from '../../assets/programs/python.svg'
 import ts from '../../assets/programs/typesript.svg'
 function Skills() {
-  // Configuración básica del carrusel
   const settings = {
-    dots: true,
+    arrows: false,
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed:0,
+    cssEase: "linear",
     responsive: [
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
         },
       },
     ],
@@ -40,10 +42,10 @@ function Skills() {
     <section id="skills" className={styles.container}>
       <h1 className="sectionTitle">Skills</h1>
       <Slider {...settings} className={styles.skillList}>
+        <SkillList src={ts} skill="TypeScript" />
         <SkillList src={html} skill="HTML" />
         <SkillList src={css} skill="CSS" />
         <SkillList src={js} skill="JavaScript" />
-        <SkillList src={ts} skill="TypeScript" />
         <SkillList src={react} skill="React" />
         <SkillList src={java} skill="Java" />
         <SkillList src={python} skill="Python" />
