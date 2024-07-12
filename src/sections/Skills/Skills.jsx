@@ -11,28 +11,29 @@ import react from '../../assets/programs/react.svg'
 import java from '../../assets/programs/java.svg'
 import python from '../../assets/programs/python.svg'
 import ts from '../../assets/programs/typesript.svg'
+
 function Skills() {
   const settings = {
     arrows: false,
     dots: false,
     infinite: true,
     speed: 1500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed:0,
     cssEase: "ease",
     responsive: [
       {
-        breakpoint: 800,
+        breakpoint: 900,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
         },
       },
     ],
